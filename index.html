@@ -3,23 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <h1 class="visually-hidden">Интернет-магазин электроники Девайс</h1>
 
     <header class="page-header container">
-      <h1 class="visually-hidden">Интернет-магазин гаджетов "Девайс"</h1>
       <a class="page-header-logo header logo" href="index.html">
-        <span class="visually-hidden">На главную</span>
-        <svg class="header-logo-icon" width="145" height="36" src="" alt="Логотип Девайса">
-        </svg>
+        <img src="images/logo/logo.svg" width="145" height="36" alt="Логотип">
       </a>
     
       <nav class="main-navigation">
         <form class="search-form" action="hhtps://echo.htmlacademy.ru/" method="get">
-          <label class="visually-hidden" for="search-text">Текст поиска</label>
           <input class="search-form-input" type="text" name="search-text" id="search-text" placeholder="Поиск по сайту" required>
            <button class="search-form-button" type="submit">Найти</button>
         </form>
@@ -40,9 +34,34 @@
       <!--Меню 2-->
       <ul class="main-navigation-list menu-navigation">
         <li class="menu-navigation-item menu-navigation-catalog">
-          <a class="menu-navigation-link catalog-link" href="catalog.html">
-            <b class="catalog-link-text">Каталог товаров</b>
-          </a>
+          <a class="menu-navigation-link catalog-link" href="catalog.html">Каталог товаров</a>
+          <button class="button-dropdown">
+            <span class="visually-hidden">Раскрывающийся список товаров</span>
+          </button>
+          <nav class="navigation">
+            <h2 class="visually-hidden">Каталог товаров</h2>
+            <ul class="navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">Моноподы для cелфи</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">Экшн-камеры</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">Умные часы</a>
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
         </li>
         <li class="menu-navigation-item">
           <a class="menu-navigation-link" href="#">Доставка</a>
@@ -66,7 +85,7 @@
           <li>
             <article class="slider-item">
               <h3 class="visually-hidden">Квадрокоптер</h3>
-              <img class="slider-img" src="img/content/slider-1.jpg" alt="Квадрокоптер с мощным лазером." width="560" height="560">
+              <img class="slider-img" src="images/sliders/slider-1.png" alt="Квадрокоптер с мощным лазером." width="560" height="560">
               <div class="slider-dsc">
                 <p class="slidedr-lead">Порхает как&nbsp;бабочка,<br>жалит как&nbsp;пчела!</p>
                 <P class="slider-txt">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
@@ -83,10 +102,10 @@
             </article>
           </li>
 
-          <li hidden>
+          <li>
             <article class="slider-item">
               <h3 class="visually-hidden">Фитнес-браслет</h3>
-              <img class="slider-img" src="img/content/slider-2.jpg" alt="Фитнес-браслет." width="560" height="560">
+              <img class="slider-img" src="images/sliders/slider-2.png" alt="Фитнес-браслет." width="560" height="560">
               <div class="slider-dsc">
                 <p class="slider-lead">Худеем<br>правильно!</p>
                 <p class="slider-txt">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -100,10 +119,10 @@
             </article>
           </li>
 
-          <li hidden>
+          <li>
             <article class="slider-item">
               <h3 class="visually-hidden">Селфи-палка</h3>
-              <img class="slider-img" src="img/content/slider-3.jpg" alt="Селфи-палка" width="560" height="560">
+              <img class="slider-img" src="images/sliders/slider-3.png" alt="Селфи-палка" width="560" height="560">
               <div class="slider-dsc">
                 <p class="slider-lead">Делай селфи,
                   <br>как Бен Стиллер! </p>
@@ -122,56 +141,29 @@
               </div>
             </article>
           </li>
-        </ol>
-
-      <div class="slider-navigation">
-        <button class="slider-button button-prev" type="button">
-          <span class="visually-hidden">Предыдущий товар</span>
-        </button>
-        <button class="slider-button button-next" type="button">
-          <span class="visually-hidden">Следующий товар</span>
-        </button>
-      </div>
-
-      <ol class="slider-pagination">
-        <li>
-          <button class="slider-pagination-button slider-pagination-button-current" type="button" disabled>
-            <span class="visually-hidden">1 товар</span>
-          </button>
-        </li>
-        <li>
-          <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">2 товар</span>
-          </button>
-        </li>
-        <li>
-          <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">3 товар</span>
-          </button>
-        </li>
-      </ol>      
+        </ol> 
       </section>
 
       <section class="category-container">
         <h2 class="visually-hidden">Популярные категории</h2>
         <ul class="category-list">
-          <li>
-            <a class="vr" href="#">Виртуальная реальность</a>
+          <li category="category-item">
+            <a class="category-link category-vr" href="#">Виртуальная реальность</a>
           </li>
-          <li>
-            <a class="monopode" href="#">Моноподы для селфи</a>
+          <li category="category-item">
+            <a class="category-link category-monopode" href="#">Моноподы для селфи</a>
           </li>
-          <li>
-            <a class="action-camera" href="#">Экшн-камеры</a>
+          <li category="category-item">
+            <a class="category-link category-action-camera" href="#">Экшн-камеры</a>
           </li>
-          <li>
-            <a class="fitnes-band" href="#">Фитнес-браслеты</a>
+          <li category="category-item">
+            <a class="category-link category-fitnes-band" href="#">Фитнес-браслеты</a>
           </li>
-          <li>
-            <a class="smart-watch" href="#">Умные часы</a>
+          <li category="category-item">
+            <a class="category-link category-smart-watch" href="#">Умные часы</a>
           </li>
-          <li>
-            <a class="quadrocopter" href="#">Квадрокоптеры</a>
+          <li category="category-item">
+            <a class="category-link category-quadrocopter" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
@@ -179,17 +171,12 @@
       <section class="services">
         <div class="container">
           <h2 class="visually-hidden">Наши услуги</h2>
-          <ul class="services-button services-up">
-            <li class="services-item">
-              <button class="main-button services-button services-button-current" type="button" disabled>Доставка</button> 
-            </li>
-            <li>
-              <button class="main-button services-button" type="button">Гарантия</button>
-            </li>
-            <li>
-              <button class="main-button services-button" type="button">Кредит</button>
-            </li>
+          <ul class="services-list">
+            <li class="service-item"><a class="main-link main-link-current" href="#">Доставка</a></li>
+            <li class="service-item"><a class="main-link" href="#">Гарантия</a></li>
+            <li class="service-item"><a class="main-link" href="#">Кредит</a></li>
           </ul>
+            
           <ul class="services_tabs services-up">
             <li class="services_tab services-delivery">
               <h2 class="services-title">Доставка</h2>
@@ -211,10 +198,9 @@
         </div>
       </section>
 
-      <a class="deleviry-button container" href="#">
-        Доставим редкий товар под заказ
-        <span class="info-button"></span>
-      </a>
+      <div class="delivery">
+        <a class="delivery-link" href="#">доставим редкий товар под заказ</a>
+      </div>
 
       <div class="about container">
         <section class="about-block about-info">
@@ -272,10 +258,7 @@
     <footer class="page-footer">
       <div class="container">
         <a class="page-footer-logo" href="index.ht,;">
-          <span class="visually-hidden">Логотип Девайс</span>
-          <svg width="145" height="36" src="">
-
-          </svg>
+          <img src="images/logo/logo-color.svg" width="145" height="36" alt="Логотип Девайс">
         </a>
 
         <section class="page-footer-info">
@@ -306,36 +289,21 @@
           <ul class="page-footer-social-list">
             <li class="page-footer-social-item">
               <a class="button-social button-facebook" href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Facebook</span>
-              <svg width="9" height="18" src="">
-                
-              </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="btn-social btn-instagram" href="https://www.instagram.com/htmlacademy/">
-                <span class="visually-hidden">Instagram</span>
-                <svg width="16" height="16" src="">
-
-                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="btn-social btn-twitter" href="https://twitter.com/htmlacademy_ru">
-                <span class="visually-hidden">Twitter</span>
-                <svg width="15" height="14" src="">
-                  
-                </svg>
               </a>
             </li>
           </ul>
         </section>
 
         <a class="page-footer-copyright" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">Сделано в HTML Academy</span>
-          <svg width="115" height="34" src="">
-
-          </svg>
+          <img src="images/logo/logo-htmlacademy.svg" width="115" height="33" alt="Сделано в Html-Academy ">
         </a>
       </div>
     </footer>
