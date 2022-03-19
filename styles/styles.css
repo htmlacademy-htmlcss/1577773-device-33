@@ -772,85 +772,127 @@ body {
 }
 
 /* Услуги доставки */
+/*сервисы*/
 .services {
-  background: linear-gradient(180deg, transparent 100px, #f0f0f0 100px 100%);
+  width: auto;
+  height: 289px;
+  margin: 0 auto;
+  margin-top: 150px;
+  background-color: #f0f0f0;
 }
 
-.services-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 70px;
-  padding-bottom: 72px;
+.tabs {
+  width: 1160px;
+  margin: 0 auto;
+  margin-top: -105px;
+  position: relative;
 }
 
-.services-list {
-  box-sizing: border-box;
-  width: 287px;
-  list-style: none;
-  padding: 63px 0 65px 0;
-  margin: 0;
-  border-right: 8px solid #000000;
-}
-
-.services-item {
-  margin-bottom: 35px;
-}
-
-.services-item:last-of-type {
-  margin: 0;
-}
-
-.services-descr-list {
-  list-style: none;
-  padding: 73px 63px 0 0;
-  margin: 0;
-}
-
-.services-descr-item {
+.services-tab {
   display: none;
+  padding: 15px;
+  padding-left: 116px;
+  position: relative;
+  top: -248px;
+  left: 280px;
+}
+
+.services-description {
+  margin-left: 100px;
+}
+
+input {
+  display: none;
+}
+
+/*блок-сервисы-на-tabs*/
+.service-tabs {
+  display: block;
+  width: 245px;
+  margin-top: 35px;
+  padding: 10px;
+  padding-left: 25px;
+  cursor: pointer;
+  font-family: "Raleway",sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style-type: none;
+  letter-spacing: 0.2em;
+  background-image: url("../images/image-main/substrate.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left;
+}
+.service-tabs-name {
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+}
+
+.service-tabs:hover {
+  background-color:#000000;
+  color: #ffe17f;
+  background-image: none;
+}
+
+.service-tabs:focus {
+  box-shadow: inset 0 0 0 2px #af4fff;
+  outline: none;
+}
+
+.service-input:focus {
+  box-shadow: inset 0 0 0 2px #af4fff;
+  outline: none;
+}
+
+input:checked + label {
+  color: #ffe17f;
+  background: #000000;
+} 
+
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 { 
+  display: block;
+}
+
+.services-tab {
   width: 694px;
-  justify-content: space-between;
-}
-
-.services-descr-active {
-  display: flex;
-}
-
-.services-descr-text-wrapper {
-  width: 452px;
+  list-style-type: none;
+  background-image: url("../images/image-main/Rectangle.svg");
+  background-repeat: no-repeat;
+  background-position: 0;
 }
 
 .services-title {
-  font-family: "Raleway", sans-serif;
+  font-family: "raleway",sans-serif;
   font-size: 50px;
-  line-height: 50px;
   font-weight: 800;
-  margin: 0;
+  line-height: 50px;
+  color: #000000;
   margin-bottom: 34px;
 }
 
-.services-item-link {
-  width: 160px;
+.services-description {
+  font-family: "rubik",sans-serif;
+  width: 448px;
+  height: 90px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #444444;
+  margin-left: 0;
+} 
+
+.image-services {
+  position:absolute;
+  left: 650px;
+  bottom: 35px;
 }
 
-.button-services-active {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffe17f;
-  display: block;
-  width: 285px;
-  height: 40px;
-  line-height: 40px;
-  background-color: #000000;
-  padding-left: 17px;
-  box-sizing: border-box;
-}
 
 /* Промо доставки */
 .delivery-promo-wrapper {
@@ -1034,116 +1076,108 @@ body {
 }
 
 /* Подписка на рассылку */
-.subscription {
+.subscribe {
+  width: 100%;
   background-color: #f0f0f0;
-  padding-top: 64px;
-  padding-bottom: 56px;
+  margin-top: 70px;
 }
 
-.subscription-text-wrapper {
-  display: flex;
+.subscribe-block {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  list-style: none;
+  display:flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 144px;
+  margin-bottom: 126px;
 }
 
-.subscription-welcome {
-  font-family: "Raleway", sans-serif;
+.subscribe-title {
+  font-family: "raleway",sans-serif;
+  width: 450px;
+  height: 100px;
   font-size: 50px;
   font-weight: 800;
   line-height: 50px;
   color: #000000;
-  margin: 0;
-  width: 348px;
-  margin-left: 7px;
+  margin-top: 64px;
+  text-align: left;
+  padding-left: 147px;
+  margin-bottom: 0;
 }
 
-.subscription-descr {
+.subscribe-description {
   width: 560px;
-  margin: 0;
-  margin-right: -7px;
-  align-self: flex-end;
-}
-
-.subscription-form {
-  display: flex;
-}
-
-.subscription-input {
-  box-sizing: border-box;
-  width: 559px;
-  font-family: "Rubik", sans-serif;
+  font-family: "rubik",sans-serif;
   font-style: normal;
-  font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  font-weight: 400;
   color: #444444;
-  padding-left: 18px;
-  background-color: transparent;
-  border: 0;
-  border-bottom: #c4c4c4 solid 3px;
-  outline: 0;
+  padding-right: 133px;
+  margin-top: 64px;
+  margin-bottom: 0;
 }
 
-.subscription-input:focus {
-  background-color: #dcdcdc;
-  outline: none;
+.newsletter-form-container {
+  display: flex;
+  flex-direction: row;
+  width: 1158px;
+  margin: 0 auto;
+  margin-bottom: 56px;
 }
 
-.subscription-input:invalid {
-  border-color: #ff3d3d;
+.form-conteiner {
+  width: 820px;
+}
+.form-flex {
+  display: flex;
+
+}
+.field {
+  display: block;  
+  width: 557px;
+  height: 51px;
+  background-color: #f0f0f0;
+  border: none;
+  background-image: url("../images/image-main/Rectangle-letter.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: right;
 }
 
-.subscription-button {
-  box-sizing: border-box;
-  width: 253px;
-  height: 57px;
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 800;
+.field:hover {
+  background-color:#dcdcdc;
+}
+
+.newsletter-button { 
+  display: block; 
+  width: 253px;  
+  border: 3px solid #cecece;
+  font-family: "Raleway",sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background-color: transparent;
-  border: #c4c4c4 solid 3px;
-  outline: 0;
-  padding: 0;
 }
 
-.subscription-button:hover {
-  border-color: #000000;
-}
-
-.subscription-button:active {
-  opacity: 0.3;
-}
-
-.subscription-button:disabled {
-  border-color: #e5e5e5;
-  opacity: 0.3;
-  cursor: default;
-}
-
-.subscription-ok {
-  padding: 0;
-  margin: 0;
-  margin-left: auto;
-  align-self: center;
+.free {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  padding-left: 175px;
 }
 
-.subscription-ok::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 16px;
-  background: url("../images/ui/check.svg") no-repeat;
-  align-self: center;
+.free-icon {
+  width: 14px;
 }
 
-.button-subscribe {
-  width: 265px;
+.subscribe-text {
+  width: 128px;
 }
 
 /* каталог */
